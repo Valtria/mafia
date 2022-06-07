@@ -1,0 +1,37 @@
+
+
+.heading__reviews{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.section-title{
+  margin-bottom: 20px;
+}
+
+.form__input{
+  display: flex;
+  border-radius: 4px;
+  border: 3px solid transparent;
+  padding: 19px 12px;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+}
+
+.form__group{
+  display: flex;
+  gap: 20px;
+  column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__input--type-textarea{
+  height: 127px;
+  width: 504px;
+}
+
+.form__input:focus {
+  border: 3px solid #E01F3D;
+}

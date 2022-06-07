@@ -1,0 +1,56 @@
+.welcome{
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  z-index: -10;
+  background: url(/img/FsJa37g96lM.jpg) bottom / cover no-repeat;
+}
+
+.heading__index{
+  color: #ae142b;
+}
+
+
+.central{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(106, 103, 103, 0.525);
+  border-radius: 15px;
+  padding: 50px;
+}
+
+.central__logo{
+  margin-bottom: 65px;
+}
+
+.central__video{
+  opacity: 0;
+  animation: rotateIn .9s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotateIn{
+  from{
+    transform: scale(0.1) rotate(30deg);
+  }
+  
+  50%{
+    transform: rotate(-10deg);
+  }
+
+  70%{
+    transform: rotate(3deg);
+  }
+
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}

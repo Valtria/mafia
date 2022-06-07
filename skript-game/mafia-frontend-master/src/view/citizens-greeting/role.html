@@ -1,0 +1,30 @@
+<div class="js-view citizens-greeting-role">
+    <h1 class="text-center">Ваша роль готова</h1>
+    <br>
+    <br>
+    <button type="button" class="btn btn-success form-control" id="view-citizens-greeting-role-show-btn">Посмотреть мою роль</button>
+</div>
+
+<div class="js-view citizens-greeting-role-post">
+    <h1 class="text-center">Ваша роль</h1>
+    <h2 class="text-center" id="view-citizens-greeting-role">Мафия</h2>
+    <div id="view-citizens-greeting-description">Описание</div>
+    <img src="" id="view-citizens-greeting-pic">
+    <button type="button" class="btn btn-success form-control" id="view-citizens-greeting-role-btn">Я запомнил роль</button>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var showBtn = document.getElementById('view-citizens-greeting-role-show-btn');
+        var startBtn = document.getElementById('view-citizens-greeting-role-btn');
+
+        startBtn.addEventListener('click', function() {
+            bus.emit('view.citizens-greeting.accept', {})
+        });
+
+        showBtn.addEventListener('click', function() {
+            document.querySelector('.citizens-greeting-role').removeClass('active');
+            document.querySelector('.citizens-greeting-role-post').addClass('active');
+        });
+    })
+</script>
